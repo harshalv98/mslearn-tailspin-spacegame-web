@@ -1,4 +1,11 @@
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    projects: 'harshalv98.mslearn-tailspin-spacegame-web'
+pool: MyAgentPool
+
+  - task:UseDotNet@2
+
+inputs:
+    
+    packageType: 'sdk'
+    useGlobalJson: true
+    workingDirectory: 'https://github.com/harshalv98/mslearn-tailspin-spacegame-web/'
+steps:
+- bash: echo hello world
