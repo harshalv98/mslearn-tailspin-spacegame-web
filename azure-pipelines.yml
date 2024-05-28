@@ -1,3 +1,8 @@
 pool: MyAgentPool
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    useGlobalJson: true
+    workingDirectory: 'C:\Users\v-hvora\mslearn-tailspin-spacegame-web\Tailspin.SpaceGame.Web'
 steps:
 - bash: echo hello world
