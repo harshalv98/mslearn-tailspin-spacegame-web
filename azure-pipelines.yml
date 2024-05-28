@@ -1,7 +1,4 @@
-pool: MyAgentPool
-  - task:DotNetCoreCLI@2
-inputs:
-command: 'publish'
-publishWebProjects: true
-steps:
-- bash: echo hello world
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: 'harshalv98.mslearn-tailspin-spacegame-web'
